@@ -14,7 +14,4 @@ node {
             }
         }
     }
-    stage('ArchiveResults') {
-        archiveArtifacts 'app/build/outputs/apk/release/*.apk'
-    }
 }
