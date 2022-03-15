@@ -6,7 +6,7 @@ node {
     }
     stage('Build') {
     withEnv(["GDL_HOME=$gdlHome"]) {
-		sh '"$GDL_HOME/bin/gradle" build'
+		sh './gradlew build'
 	    }
     }
 }
