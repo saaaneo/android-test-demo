@@ -8,9 +8,9 @@ node {
         // Run the gradle build
         withEnv(["GDL_HOME=$gdlHome"]) {
             if (isUnix()) {
-                sh '"$GDL_HOME/bin/gradle" -Dmaven.test.failure.ignore clean build'
+                sh '"$GDL_HOME/bin/gradle" clean build'
             } else {
-                bat(/"%GDL_HOME%\bin\gradle" -Dmaven.test.failure.ignore clean build)
+                bat(/"%GDL_HOME%\bin\gradle" clean build)
             }
         }
     }
